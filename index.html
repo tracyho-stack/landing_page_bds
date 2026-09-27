@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinhomes Grand Park | Đô Thị Đẳng Cấp Tại TP. Thủ Đức</title>
+    <meta name="description" content="Khám phá Vinhomes Grand Park - Thành phố thông minh với đại công viên 36ha, hệ sinh thái tiện ích All-in-one và lối sống thượng lưu tại TP. Thủ Đức.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom CSS based on Requirements -->
+    <style>
+        :root {
+            --page-bg: #f2f2f2;
+            --primary: #2d2d86;
+            --primary-hover: #1e1e62;
+            --primary-light: rgba(45, 45, 134, 0.08);
+            --gold-accent: #c59b27;
+            --text-dark: #1e2229;
+            --text-muted: #5e6d82;
+            --card-bg: #ffffff;
+            --border-color: #e4e7ec;
+            --shadow-subtle: 0 10px 30px rgba(45, 45, 134, 0.06);
+            --shadow-hover: 0 18px 38px rgba(45, 45, 134, 0.12);
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--page-bg);
+            color: var(--text-dark);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Typography & Utilities */
+        .text-primary-custom {
+            color: var(--primary) !important;
+        }
+
+        .bg-primary-custom {
+            background-color: var(--primary) !important;
+            color: #ffffff;
+        }
+
+        .text-gold {
+            color: var(--gold-accent) !important;
+        }
+
+        .section-title {
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        /* Navbar */
+        .navbar-custom {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary) !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .navbar-brand .brand-badge {
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background-color: var(--primary);
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: #33334d !important;
+            padding: 0.5rem 1rem !important;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary);
+            transition: width 0.25s ease;
+        }
+
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 60%;
+        }
+
+        /* Buttons */
+        .btn-custom-primary {
+            background-color: var(--primary);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 1.6rem;
+            border-radius: 50px;
+            border: 2px solid var(--primary);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(45, 45, 134, 0.25);
+        }
+
+        .btn-custom-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(45, 45, 134, 0.35);
+        }
+
+        .btn-custom-outline {
+            background-color: transparent;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0.75rem 1.6rem;
+            border-radius: 50px;
+            border: 2px solid var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-outline:hover {
+            background-color: var(--primary-light);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 5rem 0 4rem;
+            position: relative;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #ffffff;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 6px 16px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.25rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-title {
+            font-size: 2.85rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--primary);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 440px;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-hover);
+            transition: transform 0.4s ease;
+        }
+
+        .hero-floating-card {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 1rem 1.4rem;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .floating-icon-box {
+            width: 44px;
+            height: 44px;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            padding: 1.75rem 2rem;
+            box-shadow: var(--shadow-subtle);
+            margin-top: 3rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            margin-bottom: 0;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 5rem 0;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-subtle);
+            transition: all 0.35s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(45, 45, 134, 0.3);
+        }
+
+        .feature-img-box {
+            position: relative;
+            height: 230px;
+            overflow: hidden;
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .feature-card:hover .feature-img {
+            transform: scale(1.06);
+        }
+
+        .feature-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(45, 45, 134, 0.85);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .feature-body {
+            padding: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .feature-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+            flex-grow: 1;
+        }
+
+        .feature-badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: auto;
+        }
+
+        .feature-badge-item {
+            background-color: #f6f8fb;
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Amenities Highlight Section */
+        .amenities-section {
+            background-color: #ffffff;
+            padding: 5rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .amenity-box {
+            background: var(--page-bg);
+            border-radius: var(--radius-sm);
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .amenity-box:hover {
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-4px);
+        }
+
+        .amenity-icon {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .amenity-box:hover .amenity-icon {
+            color: #ffffff;
+        }
+
+        .amenity-box h5 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .amenity-box p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+            opacity: 0.85;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 5rem 0;
+        }
+
+        .contact-card {
+            background: #ffffff;
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-control, .form-select {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            font-size: 0.95rem;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(45, 45, 134, 0.15);
+        }
+
+        /* Footer */
+        .footer-custom {
+            background-color: #1a1a54;
+            color: #d1d5db;
+            padding: 4rem 0 2rem;
+            border-top: 3px solid var(--primary);
+        }
+
+        .footer-brand {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .footer-heading {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        /* Responsive Tweaks */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .hero-img {
+                height: 350px;
+                margin-top: 2rem;
+            }
+            .hero-floating-card {
+                bottom: 10px;
+                left: 10px;
+            }
+            .stats-bar {
+                padding: 1.25rem;
+            }
+            .stat-item {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand" href="#trang-chu">
+                    <i class="bi bi-buildings-fill text-primary-custom"></i>
+                    <span>VINHOMES</span>
+                    <span class="brand-badge">Grand Park</span>
+                </a>
+                
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#trang-chu">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#dac-quyen">Đặc quyền</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tien-ich">Tiện ích</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#lien-he">Liên hệ</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="#lien-he" class="btn btn-custom-primary">
+                            <i class="bi bi-telephone-fill me-1"></i> Nhận tư vấn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="trang-chu" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Bên trái: Headline & Nội dung -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="hero-badge">
+                            <i class="bi bi-geo-alt-fill text-primary-custom"></i>
+                            <span>Thành phố Thủ Đức, TP. Hồ Chí Minh</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Nâng Tầm Chuẩn Sống Thượng Lưu Tại Vinhomes Grand Park
+                        </h1>
+                        <p class="hero-desc">
+                            Tận hưởng không gian sống sinh thái đỉnh cao với đại công viên 36ha quy mô hàng đầu Đông Nam Á, hệ sinh thái All-in-One trọn vẹn và cộng đồng cư dân văn minh chuẩn quốc tế.
+                        </p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#dac-quyen" class="btn btn-custom-primary">
+                                <i class="bi bi-compass-fill me-1"></i> Khám phá ngay
+                            </a>
+                            <a href="#lien-he" class="btn btn-custom-outline">
+                                <i class="bi bi-calendar2-check me-1"></i> Đăng ký tham quan
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bên phải: Hình ảnh bất động sản cao cấp -->
+                    <div class="col-lg-6">
+                        <div class="hero-image-wrapper">
+                            <!-- Ảnh bất động sản biệt thự / không gian nghỉ dưỡng cao cấp -->
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80" 
+                                 alt="Vinhomes Grand Park Biệt thự cao cấp" 
+                                 class="hero-img">
+                            <div class="hero-floating-card">
+                                <div class="floating-icon-box">
+                                    <i class="bi bi-shield-check"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-0 fw-bold text-primary-custom">Không Gian Sống Resort</h6>
+                                    <small class="text-muted">Chuẩn quốc tế giữa lòng TP. Thủ Đức</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thống kê nổi bật -->
+                <div class="stats-bar">
+                    <div class="row text-center gy-3">
+                        <div class="col-6 col-md-3 stat-item">
+                            <h3>36 ha</h3>
+                            <p>Đại công viên sinh thái</p>
+                        </div>
+                        <div class="col-6 col-md-3 stat-item">
+                            <h3>100+</h3>
+                            <p>Tiện ích chuẩn 5 sao</p>
+                        </div>
+                        <div class="col-6 col-md-3 stat-item">
+                            <h3>100%</h3>
+                            <p>Pháp lý minh bạch</p>
+                        </div>
+                        <div class="col-6 col-md-3 stat-item">
+                            <h3>24/7</h3>
+                            <p>An ninh & Dịch vụ hỗ trợ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (3 tính năng / lợi ích theo đúng REQUIREMENTS.md) -->
+        <section id="dac-quyen" class="features-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Đặc Quyền Vượt Trội</h2>
+                    <p class="section-subtitle">
+                        Kiến tạo cuộc sống hoàn mỹ với những giá trị độc bản dành riêng cho quý cư dân tinh hoa tại Vinhomes Grand Park.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Feature 1: Lối sống thượng lưu -->
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-img-box">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Lối sống thượng lưu" 
+                                     class="feature-img">
+                                <span class="feature-tag">Đặc quyền 01</span>
+                            </div>
+                            <div class="feature-body">
+                                <h3 class="feature-title">Lối Sống Thượng Lưu</h3>
+                                <p class="feature-desc">
+                                    Trải nghiệm không gian sống mang đậm phong cách nghỉ dưỡng xa hoa, tôn vinh vị thế chủ nhân với thiết kế kiến trúc đương đại cùng cộng đồng cư dân ưu tú, thịnh vượng.
+                                </p>
+                                <div class="feature-badge-list">
+                                    <span class="feature-badge-item"><i class="bi bi-star-fill text-warning me-1"></i>Kiến trúc hiện đại</span>
+                                    <span class="feature-badge-item"><i class="bi bi-people-fill text-primary-custom me-1"></i>Cộng đồng tinh hoa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2: Tiện ích tối ưu -->
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-img-box">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Tiện ích tối ưu" 
+                                     class="feature-img">
+                                <span class="feature-tag">Đặc quyền 02</span>
+                            </div>
+                            <div class="feature-body">
+                                <h3 class="feature-title">Tiện Ích Tối Ưu</h3>
+                                <p class="feature-desc">
+                                    Hệ sinh thái trọn vẹn "All-in-One" của Tập đoàn Vingroup: Đại công viên 36ha, TTTM Vincom Mega Mall, trường liên cấp Vinschool, bệnh viện quốc tế Vinmec và xe buýt điện VinBus.
+                                </p>
+                                <div class="feature-badge-list">
+                                    <span class="feature-badge-item"><i class="bi bi-tree-fill text-success me-1"></i>Công viên 36ha</span>
+                                    <span class="feature-badge-item"><i class="bi bi-cart3 text-primary-custom me-1"></i>Vincom Mega Mall</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3: Pháp lý nhanh gọn -->
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <div class="feature-img-box">
+                                <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" 
+                                     alt="Pháp lý nhanh gọn" 
+                                     class="feature-img">
+                                <span class="feature-tag">Đặc quyền 03</span>
+                            </div>
+                            <div class="feature-body">
+                                <h3 class="feature-title">Pháp Lý Nhanh Gọn</h3>
+                                <p class="feature-desc">
+                                    Quy trình rõ ràng, minh bạch và thủ tục giao dịch thuận tiện. Đội ngũ chuyên viên tư vấn đồng hành tận tâm, hỗ trợ khách hàng nhanh chóng sở hữu không gian sống mơ ước.
+                                </p>
+                                <div class="feature-badge-list">
+                                    <span class="feature-badge-item"><i class="bi bi-file-earmark-check-fill text-primary-custom me-1"></i>Minh bạch hợp đồng</span>
+                                    <span class="feature-badge-item"><i class="bi bi-clock-history text-primary-custom me-1"></i>Thủ tục linh hoạt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tiện Ích Section -->
+        <section id="tien-ich" class="amenities-section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Hệ Sinh Thái Đẳng Cấp</h2>
+                    <p class="section-subtitle">
+                        Mọi nhu cầu học tập, giải trí, mua sắm và chăm sóc sức khỏe đều hiện diện ngay trước thềm nhà bạn.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="amenity-box">
+                            <i class="bi bi-water amenity-icon"></i>
+                            <h5>Hồ Bơi Resort</h5>
+                            <p>Không gian thư giãn chuẩn nghỉ dưỡng</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="amenity-box">
+                            <i class="bi bi-shop amenity-icon"></i>
+                            <h5>Vincom Mega Mall</h5>
+                            <p>Thiên đường mua sắm và giải trí</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="amenity-box">
+                            <i class="bi bi-mortarboard-fill amenity-icon"></i>
+                            <h5>Vinschool</h5>
+                            <p>Môi trường giáo dục chuẩn quốc tế</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="amenity-box">
+                            <i class="bi bi-heart-pulse-fill amenity-icon"></i>
+                            <h5>Vinmec</h5>
+                            <p>Chăm sóc sức khỏe y tế chất lượng cao</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Liên Hệ Section -->
+        <section id="lien-he" class="contact-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="contact-card">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-lg-5">
+                                    <h3 class="fw-bold text-primary-custom mb-3">Đăng Ký Nhận Tư Vấn & Báo Giá</h3>
+                                    <p class="text-muted mb-4">
+                                        Hãy để lại thông tin để nhận bảng giá chi tiết, chính sách ưu đãi mới nhất và lịch tham quan thực tế dự án Vinhomes Grand Park.
+                                    </p>
+                                    
+                                    <div class="d-flex align-items-center gap-3 mb-3">
+                                        <div class="floating-icon-box flex-shrink-0">
+                                            <i class="bi bi-telephone-inbound-fill"></i>
+                                        </div>
+                                        <div>
+                                            <small class="text-muted d-block">Hotline tư vấn (mẫu)</small>
+                                            <strong class="text-primary-custom">1900 23 23 89</strong>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex align-items-center gap-3">
+                                        <div class="floating-icon-box flex-shrink-0">
+                                            <i class="bi bi-geo-alt-fill"></i>
+                                        </div>
+                                        <div>
+                                            <small class="text-muted d-block">Vị trí dự án</small>
+                                            <strong class="text-dark">Đường Nguyễn Xiển, Long Bình, TP. Thủ Đức, TP.HCM</strong>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-7">
+                                    <form id="leadForm" onsubmit="handleFormSubmit(event)">
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label for="fullName" class="form-label fw-semibold text-dark">Họ và tên *</label>
+                                                <input type="text" class="form-control" id="fullName" placeholder="Nguyễn Văn A" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="phone" class="form-label fw-semibold text-dark">Số điện thoại *</label>
+                                                <input type="tel" class="form-control" id="phone" placeholder="0901 234 567" required>
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="email" class="form-label fw-semibold text-dark">Email</label>
+                                                <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                                            </div>
+                                            <div class="col-12">
+                                                <label for="productInterest" class="form-label fw-semibold text-dark">Loại hình quan tâm</label>
+                                                <select class="form-select" id="productInterest">
+                                                    <option selected value="can-ho">Căn hộ cao cấp (1PN - 3PN)</option>
+                                                    <option value="biet-thu">Biệt thự ven sông / Nhà phố</option>
+                                                    <option value="shophouse">Shophouse thương mại</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mt-4">
+                                                <button type="submit" class="btn btn-custom-primary w-100 py-3">
+                                                    <i class="bi bi-send-fill me-2"></i> Gửi Yêu Cầu Tư Vấn Ngay
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Popup Thông Báo "Đăng Ký Tư Vấn Thành Công" -->
+    <div class="modal fade" id="consultationSuccessModal" tabindex="-1" aria-labelledby="consultationSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4 border-0" style="border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
+                <div class="modal-body">
+                    <!-- Hình ảnh / Icon LIKE ngón tay cái -->
+                    <div class="d-inline-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; background-color: rgba(45, 45, 134, 0.1); border-radius: 50%; color: var(--primary);">
+                        <i class="bi bi-hand-thumbs-up-fill" style="font-size: 3rem; color: #2d2d86;"></i>
+                    </div>
+                    
+                    <h4 class="fw-bold mb-2" id="consultationSuccessModalLabel" style="color: var(--primary);">Đăng Ký Thành Công!</h4>
+                    
+                    <!-- Nội dung thông báo theo yêu cầu -->
+                    <p class="fs-5 text-secondary px-md-3 mb-4">
+                        Email đã được gửi cho admin. Chúng tôi sẽ liên hệ trong thời gian sớm nhất
+                    </p>
+
+                    <button type="button" class="btn btn-custom-primary px-5 py-2" data-bs-dismiss="modal">
+                        <i class="bi bi-check2-circle me-1"></i> Hoàn tất
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Cột 1: Thương hiệu -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="footer-brand">
+                        <i class="bi bi-buildings-fill text-gold me-2"></i>VINHOMES GRAND PARK
+                    </div>
+                    <p class="text-secondary mb-3 pe-lg-4">
+                        Dự án đại đô thị thông minh đẳng cấp quốc tế tại trung tâm Thành phố Thủ Đức, TP. Hồ Chí Minh. Mang đến chuẩn sống đỉnh cao và giá trị đầu tư vượt trội.
+                    </p>
+                    <small class="text-muted d-block">
+                        * Ghi chú: Thông tin và hình ảnh trên trang nhằm mục đích tham khảo và giới thiệu tổng quan dự án.
+                    </small>
+                </div>
+
+                <!-- Cột 2: Điều hướng -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Liên Kết Nhanh</h5>
+                    <ul class="footer-links">
+                        <li><a href="#trang-chu"><i class="bi bi-chevron-right me-1"></i> Trang chủ</a></li>
+                        <li><a href="#dac-quyen"><i class="bi bi-chevron-right me-1"></i> Đặc quyền cư dân</a></li>
+                        <li><a href="#tien-ich"><i class="bi bi-chevron-right me-1"></i> Tiện ích All-in-One</a></li>
+                        <li><a href="#lien-he"><i class="bi bi-chevron-right me-1"></i> Đăng ký tư vấn</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Thông tin liên hệ mẫu -->
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-heading">Thông Tin Liên Hệ (Mẫu)</h5>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="bi bi-geo-alt-fill text-gold me-2"></i>
+                            Đường Nguyễn Xiển & Phước Thiện, P. Long Bình, TP. Thủ Đức, TP.HCM
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill text-gold me-2"></i>
+                            Hotline tư vấn: 1900 23 23 89
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill text-gold me-2"></i>
+                            Email: contact@vinhomesgrandpark.demo
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bản quyền -->
+            <div class="footer-bottom text-center">
+                <p class="mb-0">
+                    &copy; 2026 Vinhomes Grand Park Landing Page. Phát triển theo yêu cầu dự án. Mọi quyền được bảo lưu.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Client-side Interactions -->
+    <script>
+        // Xử lý gửi biểu mẫu tư vấn & hiển thị Popup Modal kèm icon LIKE ngón tay cái
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('leadForm');
+            
+            // Khởi tạo và mở Modal Popup
+            const successModalElement = document.getElementById('consultationSuccessModal');
+            const successModal = new bootstrap.Modal(successModalElement);
+            successModal.show();
+
+            // Reset form sau khi gửi
+            form.reset();
+        }
+
+        // Tự động đóng mobile menu khi click vào nav link
+        document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                const navbarCollapse = document.getElementById('navbarContent');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
+                }
+            });
+        });
+
+        // Đánh dấu active navigation item khi cuộn trang
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (pageYOffset >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
