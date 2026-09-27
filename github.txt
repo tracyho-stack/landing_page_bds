@@ -16,3 +16,18 @@ BUỔI 2:
 https://github.com/HaiNV18/vibe_viethai
 https://kfc-landingpage-2.nvhai061993.workers.dev/
 
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+<<<<<<< Updated upstream
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+=======
+Mìao Mìao Mìao Mìao Mìao Mìao Mìao 
+
+Task1 Task1 Task1 Task1 Task1 Task1 Task1 
+Task1 Task1 Task1 Task1 Task1 Task1 Task1 
+Task1 Task1 Task1 Task1 Task1 Task1 Task1 
+Task1 Task1 Task1 Task1 Task1 Task1 Task1 
+>>>>>>> Stashed changes
